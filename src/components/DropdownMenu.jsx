@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CheckboxList from "./CheckboxList";
-import DoneButton from "./DoneButton";
+import DoneButton from "./DoneButton.jsx";
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
