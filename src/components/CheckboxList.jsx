@@ -22,15 +22,11 @@ const CheckboxList = () => {
         return updatedState;
       });
     } else {
-      // Update only the clicked checkbox
       setCheckedItems((prev) => {
         const updatedState = { ...prev, [name]: checked };
-
-        // Uncheck "All pages" if any individual checkbox is unchecked
         if (!checked) {
           updatedState.allPages = false;
         } else {
-          // Check "All pages" if all individual pages are checked
           const allChecked = Object.keys(updatedState)
             .filter((key) => key !== "allPages")
             .every((key) => updatedState[key]);
@@ -45,7 +41,6 @@ const CheckboxList = () => {
 
   return (
     <div style={styles.container}>
-      {/* All Pages */}
       <label style={styles.label}>
         <span>All pages</span>
         <input
@@ -58,7 +53,6 @@ const CheckboxList = () => {
       </label>
       <hr style={styles.divider} />
 
-      {/* Page 1 - Page 4 */}
       {["page1", "page2", "page3", "page4"].map((key) => (
         <label key={key} style={styles.label}>
           <span>{key.replace("page", "Page ")}</span>

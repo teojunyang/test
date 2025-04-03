@@ -53,8 +53,8 @@ const styles = {
   },
   buttonContainer: {
     display: "flex",
-    justifyContent: "center", // Center the button horizontally
-    padding: "10px 0", // Add some vertical space
+    justifyContent: "center",
+    padding: "10px 0", 
   },
 };
 
